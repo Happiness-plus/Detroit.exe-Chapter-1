@@ -1,0 +1,43 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 410, in script
+    m "You were just sleeping there on the sidewalk I assumed that you needed help?”"
+IOError: Couldn't find file '23.ogg'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 410, in script
+    m "You were just sleeping there on the sidewalk I assumed that you needed help?”"
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\ast.py", line 613, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\exports.py", line 1147, in say
+    who(what, interact=interact)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\character.py", line 877, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\character.py", line 716, in do_display
+    **display_args)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\character.py", line 508, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\ui.py", line 285, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\display\core.py", line 2526, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\display\core.py", line 2825, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\audio\audio.py", line 930, in interact
+    periodic()
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\audio\audio.py", line 864, in periodic
+    c.periodic()
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\audio\audio.py", line 403, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\audio\audio.py", line 67, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\badth\OneDrive\renpy-6.99.12.4-sdk\renpy\loader.py", line 543, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file '23.ogg'.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.12.4.2187
+The Legend 0.0
